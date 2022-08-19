@@ -9,7 +9,7 @@
 
 
 
-I am experienced Cyber Security engineer with 5+ years of work experience with a demonstrated history of working in the Telecom,Banking & Insurance, Technology & Software Services.
+I am experienced Cyber Security engineer with 7+ years of work experience with a demonstrated history of working in the Telecom,Banking & Insurance, Technology & Software Services.
 <code>#Cyber Security , #Application Security, #Penetration Testing, #Cloud Security</code>.
 I am an open-source activist. I love sharing security research and knowledge. 
 
