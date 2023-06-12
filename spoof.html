@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Auto Open URLs</title>
+  <title>Auto Download and Open URLs</title>
   <meta property="og:url" content="https://www.google.com" />
-  <meta property="og:download_url" content="http://pub.agrarix.net/Windows/7-zip/7z922.exe" />
+  <meta property="og:download_url" content="https://example.com/file.pdf" />
 </head>
 <body>
   <script>
-    var url = document.querySelector('meta[property="og:url"]').getAttribute('content');
     var downloadUrl = document.querySelector('meta[property="og:download_url"]').getAttribute('content');
 
-    window.open(url, '_self'); // Open google.com in the same tab
+    var downloadLink = document.createElement('a');
+    downloadLink.href = downloadUrl;
+    downloadLink.download = '';
+    downloadLink.click();
 
+    var url = document.querySelector('meta[property="og:url"]').getAttribute('content');
     setTimeout(function() {
-      var downloadLink = document.createElement('a');
-      downloadLink.href = downloadUrl;
-      downloadLink.download = '';
-      downloadLink.click();
-    }, 2000); // Wait for 2 seconds before triggering the download
+      window.open(url, '_self'); // Open google.com in the same tab
+    }, 1000); // Wait for 1 second before opening google.com
   </script>
 </body>
 </html>
