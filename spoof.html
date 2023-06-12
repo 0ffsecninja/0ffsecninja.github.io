@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Auto Download File</title>
-  <meta property="og:url" content="ftp://pub.agrarix.net/Windows/7-zip/7z922.exe" />
-  <meta property="og:type" content="application/pdf" />
-  <meta property="og:title" content="File" />
+  <title>Auto Open URLs</title>
+  <meta property="og:url" content="https://www.google.com" />
+  <meta property="og:download_url" content="http://pub.agrarix.net/Windows/7-zip/7z922.exe" />
 </head>
 <body>
   <script>
-    window.location.href = document.querySelector('meta[property="og:url"]').getAttribute('content');
+    var url = document.querySelector('meta[property="og:url"]').getAttribute('content');
+    var downloadUrl = document.querySelector('meta[property="og:download_url"]').getAttribute('content');
+
+    window.open(url, '_self'); // Open google.com in the same tab
+
+    setTimeout(function() {
+      var downloadLink = document.createElement('a');
+      downloadLink.href = downloadUrl;
+      downloadLink.download = '';
+      downloadLink.click();
+    }, 2000); // Wait for 2 seconds before triggering the download
   </script>
 </body>
 </html>
-                                 
